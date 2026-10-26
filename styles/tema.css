@@ -1,0 +1,270 @@
+/* Tormenta20 — Visual. Tudo fica sob body.t20v-ativo (tema escolhido) ou sob a classe da própria parte. */
+
+@font-face { font-family: "T20V Eczar"; font-weight: 400; src: url("../fonts/eczar-v16-latin-ext_latin-regular.woff2") format("woff2"); }
+@font-face { font-family: "T20V Eczar"; font-weight: 600; src: url("../fonts/eczar-v16-latin-ext_latin-600.woff2") format("woff2"); }
+@font-face { font-family: "T20V Gelasio"; font-weight: 400; src: url("../fonts/gelasio-v9-latin-ext_latin-regular.woff2") format("woff2"); }
+@font-face { font-family: "T20V Gelasio"; font-weight: 400; font-style: italic; src: url("../fonts/gelasio-v9-latin-ext_latin-italic.woff2") format("woff2"); }
+@font-face { font-family: "T20V Gelasio"; font-weight: 600; src: url("../fonts/gelasio-v9-latin-ext_latin-600.woff2") format("woff2"); }
+
+body.t20v-tema-pergaminho {
+	--t20v-papel: #f4ecd8;
+	--t20v-papel-2: #ebe0c6;
+	--t20v-papel-3: #ddcca8;
+	--t20v-tinta: #2a1f17;
+	--t20v-tinta-2: #5e4b3c;
+	--t20v-tinta-3: #95806b;
+	--t20v-vermelho: #8e1b1b;
+	--t20v-vermelho-2: #b8312f;
+	--t20v-vermelho-claro: #f1d7d1;
+	--t20v-borda: #c8b48c;
+	--t20v-pv: #b8312f;
+	--t20v-pm: #2f5f9e;
+	--t20v-temp: #d39a2c;
+	--t20v-acerto: #2f5a0c;
+	--t20v-acerto-fundo: #e2edd2;
+	--t20v-erro: #8e1b1b;
+	--t20v-erro-fundo: #f5dcd7;
+	--t20v-sobre-vermelho: #fff7ec;
+}
+body.t20v-tema-escuro {
+	--t20v-papel: #211d1a;
+	--t20v-papel-2: #2b2622;
+	--t20v-papel-3: #3a332c;
+	--t20v-tinta: #f0e6d6;
+	--t20v-tinta-2: #cbbba5;
+	--t20v-tinta-3: #8f806e;
+	--t20v-vermelho: #d6574d;
+	--t20v-vermelho-2: #e57a70;
+	--t20v-vermelho-claro: #45221e;
+	--t20v-borda: #4c4138;
+	--t20v-pv: #d6574d;
+	--t20v-pm: #5d92d8;
+	--t20v-temp: #d8a23a;
+	--t20v-acerto: #a4d672;
+	--t20v-acerto-fundo: #24331b;
+	--t20v-erro: #f08f85;
+	--t20v-erro-fundo: #3d201c;
+	--t20v-sobre-vermelho: #1a1512;
+}
+body.t20v-ativo {
+	--t20v-titulo: "T20V Eczar", "Modesto Condensed", serif;
+	--t20v-texto: "T20V Gelasio", Georgia, serif;
+}
+
+/* -------------------------------------------- janelas do sistema */
+
+body.t20v-ativo .app.tormenta20 > .window-header,
+body.t20v-ativo .application.tormenta20 > .window-header {
+	background: var(--t20v-vermelho);
+	color: var(--t20v-sobre-vermelho);
+	border-bottom: none;
+}
+body.t20v-ativo .app.tormenta20 > .window-header .window-title { font-family: var(--t20v-titulo); font-weight: 400; letter-spacing: 0.02em; }
+body.t20v-ativo .app.tormenta20 > .window-header a { color: var(--t20v-sobre-vermelho); }
+body.t20v-ativo .app.tormenta20 > .window-content {
+	background: var(--t20v-papel);
+	background-image: none;
+	color: var(--t20v-tinta);
+}
+body.t20v-ativo .tormenta20.sheet input,
+body.t20v-ativo .tormenta20.sheet select,
+body.t20v-ativo .tormenta20.sheet textarea { color: var(--t20v-tinta); }
+body.t20v-ativo .tormenta20.sheet input[type="text"],
+body.t20v-ativo .tormenta20.sheet input[type="number"] { background: transparent; }
+body.t20v-ativo .tormenta20.sheet select { background: var(--t20v-papel-2); }
+
+/* Abas */
+body.t20v-ativo .tormenta20.sheet nav.sheet-tabs { border-color: var(--t20v-borda); }
+body.t20v-ativo .tormenta20.sheet nav.sheet-tabs .item { font-family: var(--t20v-titulo); color: var(--t20v-tinta-2); text-shadow: none; }
+body.t20v-ativo .tormenta20.sheet nav.sheet-tabs .item.active { color: var(--t20v-vermelho); box-shadow: inset 0 -2px 0 var(--t20v-vermelho); background: none; }
+
+/* Títulos de caixa e cabeçalhos de lista */
+body.t20v-ativo .tormenta20.sheet .box-title,
+body.t20v-ativo .tormenta20.sheet .item-header,
+body.t20v-ativo .tormenta20.sheet .item-header .item-name {
+	font-family: var(--t20v-titulo);
+	font-weight: 600;
+	color: var(--t20v-vermelho);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 11px;
+	background: none;
+	border: none;
+	text-shadow: none;
+}
+body.t20v-ativo .tormenta20.sheet .item-header { border-bottom: 1px solid var(--t20v-vermelho); }
+
+/* Cabeçalho */
+body.t20v-ativo .tormenta20.sheet .sheet-header { border-bottom: 2px solid var(--t20v-vermelho); padding-bottom: 4px; }
+body.t20v-ativo .tormenta20.sheet .sheet-header .profile { border: 1px solid var(--t20v-borda); border-radius: 6px; background: var(--t20v-papel-2); }
+body.t20v-ativo .tormenta20.sheet .charname input {
+	font-family: var(--t20v-titulo);
+	font-weight: 600;
+	color: var(--t20v-vermelho);
+	font-size: 26px;
+	border: none;
+}
+body.t20v-ativo .tormenta20.sheet .header-details input,
+body.t20v-ativo .tormenta20.sheet .header-details select { border-color: var(--t20v-borda); }
+body.t20v-ativo .tormenta20.sheet .level { font-family: var(--t20v-titulo); }
+body.t20v-ativo .tormenta20.sheet .xpbar { background: var(--t20v-papel-3); }
+body.t20v-ativo .tormenta20.sheet .xpbar .bar { background: var(--t20v-vermelho); }
+
+/* Atributos */
+body.t20v-ativo .tormenta20.sheet .ability-scores .ability {
+	background: var(--t20v-papel-2);
+	border: 1px solid var(--t20v-borda);
+	border-radius: 6px;
+	margin: 0 2px;
+}
+body.t20v-ativo .tormenta20.sheet .ability-scores .atributo-value { font-family: var(--t20v-titulo); font-weight: 600; font-size: 24px; line-height: 1.1; color: var(--t20v-tinta); }
+body.t20v-ativo .tormenta20.sheet .ability-scores .attribute-footer input { color: var(--t20v-tinta-3); font-size: 11px; }
+
+/* PV, PM e Defesa */
+body.t20v-ativo .tormenta20.sheet .attributes .attribute {
+	background: var(--t20v-papel-2);
+	border: 1px solid var(--t20v-borda);
+	border-radius: 6px;
+	position: relative;
+}
+body.t20v-ativo .tormenta20.sheet .attributes .attribute-value input,
+body.t20v-ativo .tormenta20.sheet .attributes .attribute.defense .attribute-value {
+	font-family: var(--t20v-titulo);
+	font-weight: 600;
+	font-size: 22px;
+	color: var(--t20v-tinta);
+}
+body.t20v-ativo .tormenta20.sheet .attributes .attribute.defense .attribute-value { font-size: 28px; }
+body.t20v-ativo .tormenta20.sheet .attributes .attribute-footer input,
+body.t20v-ativo .tormenta20.sheet .attributes .attribute-footer select { color: var(--t20v-tinta-3); font-size: 11px; }
+.t20v-barra { position: relative; height: 6px; margin: 2px 6px 4px; border-radius: 3px; background: var(--t20v-papel-3, #ddcca8); overflow: hidden; }
+.t20v-barra span { position: absolute; inset: 0 auto 0 0; background: var(--t20v-pv, #b8312f); border-radius: 3px; }
+.t20v-barra.pm span { background: var(--t20v-pm, #2f5f9e); }
+.t20v-barra i { position: absolute; inset: 0 0 0 auto; background: var(--t20v-temp, #d39a2c); opacity: 0.85; }
+
+/* Condições */
+.t20v-condicoes { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px 6px; flex: 0 0 100%; }
+.t20v-condicao {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 1px 8px 1px 3px;
+	border-radius: 10px;
+	font-size: 11px;
+	background: var(--t20v-vermelho-claro, #f1d7d1);
+	color: var(--t20v-vermelho, #8e1b1b);
+	border: 1px solid var(--t20v-borda, #c8b48c);
+}
+.t20v-condicao img { width: 16px; height: 16px; border: none; }
+
+/* Perícias */
+body.t20v-ativo .tormenta20.sheet .skills-list li.skill:not(.item-header) { border-bottom: 1px solid color-mix(in srgb, var(--t20v-borda) 45%, transparent); }
+body.t20v-ativo .tormenta20.sheet .skills-list li.skill:not(.item-header):not(.t20v-treinada) { color: var(--t20v-tinta-3); }
+body.t20v-ativo .tormenta20.sheet .skills-list li.skill.t20v-treinada { color: var(--t20v-tinta); font-weight: 600; }
+body.t20v-ativo .tormenta20.sheet .skills-list li.skill .item-total { font-family: var(--t20v-titulo); font-weight: 600; font-size: 14px; }
+body.t20v-ativo .tormenta20.sheet .skills-list li.skill.t20v-treinada .item-image i { color: var(--t20v-vermelho); }
+
+/* Fundos cinzas do sistema → pergaminho */
+body.t20v-ativo .tormenta20.sheet .skills-list li.skill,
+body.t20v-ativo .tormenta20.sheet ol.item-list,
+body.t20v-ativo .tormenta20.sheet ul.item-list,
+body.t20v-ativo .tormenta20.sheet li.currency-item,
+body.t20v-ativo .tormenta20.sheet .level.config-button { background: transparent; }
+body.t20v-ativo .tormenta20.sheet .skills-list li.skill:nth-child(even):not(.item-header) { background: color-mix(in srgb, var(--t20v-papel-2) 70%, transparent); }
+body.t20v-ativo .tormenta20.sheet li.items-header,
+body.t20v-ativo .tormenta20.sheet article,
+body.t20v-ativo .tormenta20.sheet textarea,
+body.t20v-ativo .tormenta20.sheet ol.effects-list,
+body.t20v-ativo .tormenta20.sheet li.tag { background: var(--t20v-papel-2); }
+body.t20v-ativo .tormenta20.sheet option { background: var(--t20v-papel); color: var(--t20v-tinta); }
+body.t20v-ativo .tormenta20.sheet .level.config-button { border: 1px solid var(--t20v-borda); border-radius: 4px; color: var(--t20v-tinta); }
+body.t20v-ativo .tormenta20.sheet .encumbrance { background: var(--t20v-papel-3); border-color: var(--t20v-borda); }
+body.t20v-ativo .tormenta20.sheet .encumbrance-bar { background: var(--t20v-tinta-2); }
+
+/* Listas de itens */
+body.t20v-ativo .tormenta20.sheet .item-list .item:not(.item-header) { border-bottom: 1px solid color-mix(in srgb, var(--t20v-borda) 45%, transparent); min-height: 30px; align-items: center; }
+body.t20v-ativo .tormenta20.sheet .item-list .item .item-image img,
+body.t20v-ativo .tormenta20.sheet .item-list .item img.item-image { width: 26px; height: 26px; border-radius: 4px; border: 1px solid var(--t20v-borda); }
+body.t20v-ativo .tormenta20.sheet .item-list .item .item-name h4 { font-family: var(--t20v-texto); font-weight: 600; color: var(--t20v-tinta); }
+body.t20v-ativo .tormenta20.sheet .rollable:hover { color: var(--t20v-vermelho); text-shadow: none; }
+
+/* -------------------------------------------- NPC no formato do livro */
+
+body.t20v-ativo .tormenta20.npc .tab.statblock { font-family: var(--t20v-texto); font-size: 13px; line-height: 1.45; color: var(--t20v-tinta); }
+body.t20v-ativo .tormenta20.npc .tab.statblock .title-row { border-bottom: 2px solid var(--t20v-vermelho); margin-bottom: 2px; }
+body.t20v-ativo .tormenta20.npc .tab.statblock .title-row h2 { font-family: var(--t20v-titulo); font-weight: 600; color: var(--t20v-vermelho); border: none; margin: 0; }
+body.t20v-ativo .tormenta20.npc .tab.statblock > i { color: var(--t20v-tinta-2); }
+body.t20v-ativo .tormenta20.npc .tab.statblock label { font-weight: 600; color: var(--t20v-tinta); }
+body.t20v-ativo .tormenta20.npc .tab.statblock hr { border: none; border-top: 1px solid var(--t20v-vermelho); opacity: 0.6; }
+body.t20v-ativo .tormenta20.npc .tab.statblock .rollable:hover { color: var(--t20v-vermelho); }
+body.t20v-ativo .tormenta20.npc .tab.statblock .item-name h4 { color: var(--t20v-vermelho); font-weight: 600; }
+
+/* -------------------------------------------- chat */
+
+body.t20v-ativo #chat .chat-message,
+body.t20v-ativo #chat-popout .chat-message,
+body.t20v-ativo .chat-notifications .chat-message {
+	background: var(--t20v-papel);
+	color: var(--t20v-tinta);
+	border-color: var(--t20v-borda);
+}
+body.t20v-ativo .chat-message .message-sender { font-family: var(--t20v-titulo); color: var(--t20v-vermelho); }
+body.t20v-ativo .chat-message .message-metadata { color: var(--t20v-tinta-3); }
+body.t20v-ativo .chat-message .flavor-text { color: var(--t20v-tinta-2); font-family: var(--t20v-texto); }
+body.t20v-ativo .tormenta20.chat-card .card-header { border-bottom: 2px solid var(--t20v-vermelho); padding-bottom: 3px; margin-bottom: 4px; align-items: center; }
+body.t20v-ativo .tormenta20.chat-card .card-header h3 { font-family: var(--t20v-titulo); font-weight: 600; color: var(--t20v-vermelho); font-size: 16px; }
+body.t20v-ativo .tormenta20.chat-card .card-header img { border: 1px solid var(--t20v-borda); border-radius: 4px; }
+body.t20v-ativo .tormenta20.chat-card .card-content { font-family: var(--t20v-texto); }
+body.t20v-ativo .chat-message .dice-roll .dice-total { font-family: var(--t20v-titulo); font-weight: 600; font-size: 20px; background: var(--t20v-papel-2); border-color: var(--t20v-borda); color: var(--t20v-tinta); }
+body.t20v-ativo .chat-message .roll--dano .dice-total { color: var(--t20v-vermelho); }
+body.t20v-ativo .chat-message .dice-formula { background: var(--t20v-papel-2); border-color: var(--t20v-borda); color: var(--t20v-tinta-2); }
+body.t20v-ativo .chat-message button { background: var(--t20v-papel-2); border-color: var(--t20v-borda); color: var(--t20v-tinta); }
+body.t20v-ativo .chat-message button:hover { box-shadow: 0 0 0 1px var(--t20v-vermelho); }
+
+.tormenta20.chat-card.t20v-recolhido > .card-content,
+.tormenta20.chat-card.t20v-recolhido > .card-item-header { display: none; }
+.t20v-alternar { display: inline-block; margin: 0 0 4px; font-size: 12px; color: var(--t20v-tinta-2, inherit); cursor: pointer; }
+.t20v-alternar:hover { color: var(--t20v-vermelho, inherit); }
+.tormenta20.chat-card:not(.t20v-recolhido) .t20v-alternar span::after { content: " (recolher)"; }
+
+.t20v-resultado { list-style: none; margin: 4px 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.t20v-resultado li { padding: 4px 8px; border-radius: 6px; font-size: 13px; font-weight: 600; }
+.t20v-resultado li span { font-weight: 400; opacity: 0.85; font-size: 12px; }
+.t20v-resultado li.acerto { background: var(--t20v-acerto-fundo, #e2edd2); color: var(--t20v-acerto, #2f5a0c); }
+.t20v-resultado li.erro { background: var(--t20v-erro-fundo, #f5dcd7); color: var(--t20v-erro, #8e1b1b); }
+
+body.t20v-ativo .tormenta20.damage-card .card-damage li:last-child > div:nth-child(2) { font-family: var(--t20v-titulo); font-weight: 600; font-size: 18px; color: var(--t20v-vermelho); }
+
+/* -------------------------------------------- botões das janelas no menu ⋮ */
+
+.app > .window-header { position: relative; }
+.t20v-rotulo { display: none; }
+.t20v-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 4px;
+	z-index: 1000;
+	flex-direction: column;
+	min-width: 170px;
+	padding: 4px;
+	border-radius: 6px;
+	background: var(--t20v-papel, #f4ecd8);
+	border: 1px solid var(--t20v-borda, #c8b48c);
+	box-shadow: 0 4px 14px rgb(0 0 0 / 30%);
+}
+.t20v-menu.aberto { display: flex; }
+.t20v-menu a.header-button { display: flex; align-items: center; gap: 8px; padding: 5px 8px; margin: 0; color: var(--t20v-tinta, #2a1f17) !important; white-space: nowrap; font-size: 12px; line-height: 1.2; border-radius: 4px; }
+.t20v-menu a.header-button:hover { background: var(--t20v-papel-2, #ebe0c6); }
+.t20v-menu .t20v-rotulo { display: inline; }
+
+/* -------------------------------------------- interface do Foundry */
+
+body.t20v-barras #hotbar { opacity: 0.15; transition: opacity 150ms ease; }
+body.t20v-barras #hotbar:hover,
+body.t20v-barras #hotbar:focus-within { opacity: 1; }
+body.t20v-barras #players { max-height: 30px; overflow: hidden; opacity: 0.6; transition: max-height 150ms ease, opacity 150ms ease; }
+body.t20v-barras #players:hover { max-height: 400px; opacity: 1; }
+
+.t20v-abas-menu .t20v-abas-grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; margin: 8px 0; }
+.t20v-abas-menu label { display: flex; align-items: center; gap: 6px; }

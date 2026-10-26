@@ -1,0 +1,4 @@
+Fontes de licença aberta (SIL Open Font License 1.1, https://openfontlicense.org), copiadas da instalação local do sistema pf2e:
+- Eczar (Rosetta Type Foundry): títulos e números.
+- Gelasio (Eben Sorkin): texto corrido.
+A licença permite usar, copiar e redistribuir as fontes junto com outros arquivos, desde que não sejam vendidas sozinhas.
