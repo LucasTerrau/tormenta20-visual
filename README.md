@@ -21,7 +21,7 @@ Em *Configurações → Configurar Módulos → Tormenta20 — Visual*:
 |---|---|---|
 | Visual | cada jogador | Pergaminho e vermelho (padrão), escuro e vermelho, ou o original do sistema. Troca na hora. |
 | Recolher a descrição nos cartões com rolagem | cada jogador | Ataques e magias mostram primeiro o resultado; a descrição abre no botão "Descrição". |
-| Mostrar acertou ou errou no cartão de ataque | mestre | Guarda os alvos marcados na hora do ataque e mostra "Acertou/Errou/Crítico" contra a Defesa de cada um (20 natural sempre acerta, 1 natural sempre erra; crítico pela margem da arma). |
+| Mostrar acertou ou errou no cartão de ataque | mestre | Guarda os alvos marcados na hora do ataque e mostra "Acertou/Errou/Crítico" contra a Defesa de cada um (20 natural sempre acerta, 1 natural sempre erra; crítico pela margem da arma). Só em ataques (teste de perícia não conta); o número da Defesa só o mestre vê. |
 | Botões das janelas num menu | cada jogador | Nas fichas ficam à vista fechar, configurar a ficha do T20 e Fabricar; os outros botões vão para o menu ⋮ (quando sobram dois ou mais). |
 | Esconder dos jogadores as ferramentas de cena do mestre | mestre | Desenhos, notas, tiles, sons, luzes, paredes e regiões somem para os jogadores. |
 | Abas escondidas da barra lateral | mestre | Escolhe as abas que os jogadores não veem. Padrão: objetos da cena, tokens, tiles, desenhos, paredes, luzes, sons, regiões, notas, cartas e playlists. |

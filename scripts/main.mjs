@@ -115,7 +115,7 @@ function registrarOpcoes() {
 	});
 	game.settings.register(ID, "resultadoAtaque", {
 		name: "Mostrar acertou ou errou no cartão de ataque",
-		hint: "Compara o ataque com a Defesa dos alvos marcados na hora da rolagem (20 natural sempre acerta, 1 natural sempre erra).",
+		hint: "Compara o ataque com a Defesa dos alvos marcados na hora da rolagem (20 natural sempre acerta, 1 natural sempre erra). Só em ataques; a Defesa do alvo aparece só para o mestre.",
 		scope: "world",
 		config: true,
 		type: Boolean,
@@ -253,8 +253,14 @@ function decorarFicha(app) {
 
 /* -------------------------------------------- chat */
 
+/**
+ * O sistema marca toda rolagem de d20 como "attack", inclusive testes de perícia e atributo. Ataque de verdade vem de um
+ * item com rolagem de ataque (arma, magia, poder): só esse cartão guarda o item com uma rolagem do tipo "ataque".
+ */
 function rolagemDeAtaque(message) {
-	return (message.rolls ?? []).find((r) => r.dice?.[0]?.faces === 20 && r.options?.type !== "damage");
+	const rolagensDoItem = foundry.utils.getProperty(message, "flags.tormenta20.itemData.rolls") ?? [];
+	if (!rolagensDoItem.some((r) => r.type === "ataque")) return null;
+	return (message.rolls ?? []).find((r) => r.dice?.[0]?.faces === 20 && r.options?.type === "attack");
 }
 
 function decorarCartao(message, html) {
@@ -283,7 +289,10 @@ function decorarCartao(message, html) {
 		const acertou = natural === 20 || (natural !== 1 && ataque.total >= a.defesa);
 		const critico = acertou && natural >= margem;
 		const nome = foundry.utils.escapeHTML(a.nome);
-		return `<li class="${acertou ? "acerto" : "erro"}"><i class="fa-solid ${acertou ? "fa-check" : "fa-xmark"}"></i> ${acertou ? (critico ? "Crítico" : "Acertou") : "Errou"} ${nome} <span>(${ataque.total} contra Defesa ${a.defesa}${natural === 20 ? ", 20 natural" : natural === 1 ? ", 1 natural" : ""})</span></li>`;
+		const extremo = natural === 20 ? "20 natural" : natural === 1 ? "1 natural" : "";
+		// A Defesa do alvo só aparece para o mestre; os jogadores veem o resultado e o 20/1 natural.
+		const detalhe = game.user.isGM ? `${ataque.total} contra Defesa ${a.defesa}${extremo ? `, ${extremo}` : ""}` : extremo;
+		return `<li class="${acertou ? "acerto" : "erro"}"><i class="fa-solid ${acertou ? "fa-check" : "fa-xmark"}"></i> ${acertou ? (critico ? "Crítico" : "Acertou") : "Errou"} ${nome}${detalhe ? ` <span>(${detalhe})</span>` : ""}</li>`;
 	});
 	const caixa = document.createElement("ul");
 	caixa.className = "t20v-resultado";

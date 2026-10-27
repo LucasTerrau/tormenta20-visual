@@ -2,7 +2,7 @@
   "id": "tormenta20-visual",
   "title": "Tormenta20 — Visual",
   "description": "Repaginada leve do sistema Tormenta20: ficha, NPC e cartões do chat mais fáceis de ler, interface do Foundry enxuta e artes dos livros nos compêndios. Cada parte tem sua chave nas configurações.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     {
       "name": "Terrinha (Lucas Terra)",
@@ -37,7 +37,7 @@
   "url": "https://github.com/LucasTerrau/tormenta20-visual",
   "bugs": "https://github.com/LucasTerrau/tormenta20-visual/issues",
   "manifest": "https://github.com/LucasTerrau/tormenta20-visual/releases/latest/download/module.json",
-  "download": "https://github.com/LucasTerrau/tormenta20-visual/releases/download/v0.1.0/module.zip",
+  "download": "https://github.com/LucasTerrau/tormenta20-visual/releases/download/v0.1.1/module.zip",
   "license": "LICENSE",
   "readme": "README.md"
 }
