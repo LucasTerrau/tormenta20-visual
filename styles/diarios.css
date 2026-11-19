@@ -1,0 +1,95 @@
+/* Tormenta20 — Visual: diários (janelas do próprio Foundry) com as cores e as fontes do tema. A moldura vale para todo
+   diário; o texto das páginas fica de fora em diários que trazem estilo próprio (como os da Libertação de Valkaria). */
+
+/* Moldura */
+body.t20v-ativo .application.journal-sheet > .window-header,
+body.t20v-ativo .application.journal-entry-page > .window-header {
+	background: var(--t20v-vermelho);
+	color: var(--t20v-sobre-vermelho);
+	border-bottom: none;
+}
+body.t20v-ativo .application.journal-sheet > .window-header .window-title,
+body.t20v-ativo .application.journal-entry-page > .window-header .window-title {
+	font-family: var(--t20v-titulo);
+	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+body.t20v-ativo .application.journal-sheet > .window-header .header-control,
+body.t20v-ativo .application.journal-entry-page > .window-header .header-control { color: var(--t20v-sobre-vermelho); }
+body.t20v-ativo .application.journal-sheet > .window-content,
+body.t20v-ativo .application.journal-entry-page > .window-content {
+	background: var(--t20v-papel);
+	color: var(--t20v-tinta);
+}
+
+/* Índice das páginas */
+body.t20v-ativo .journal-sheet .journal-sidebar {
+	background: var(--t20v-papel-2);
+	color: var(--t20v-tinta);
+	border-right: 1px solid var(--t20v-borda);
+}
+body.t20v-ativo .journal-sheet .journal-sidebar .toc li { border-color: var(--t20v-borda); }
+body.t20v-ativo .journal-sheet .journal-sidebar .toc :is(.page-heading, .heading-link, a) { color: var(--t20v-tinta-2); text-shadow: none; }
+body.t20v-ativo .journal-sheet .journal-sidebar .toc .page-number { color: var(--t20v-tinta-3); }
+body.t20v-ativo .journal-sheet .journal-sidebar .toc li.active > :is(.page-heading, a),
+body.t20v-ativo .journal-sheet .journal-sidebar .toc li.active .page-title { color: var(--t20v-vermelho); font-weight: 600; }
+body.t20v-ativo .journal-sheet .journal-sidebar .toc .page-title { font-family: var(--t20v-titulo); }
+body.t20v-ativo .journal-sheet .journal-sidebar search input {
+	background: var(--t20v-papel);
+	color: var(--t20v-tinta);
+	border: 1px solid var(--t20v-borda);
+}
+body.t20v-ativo .journal-sheet .journal-sidebar :is(search, .action-buttons) button {
+	background: var(--t20v-papel);
+	color: var(--t20v-tinta-2);
+	border: 1px solid var(--t20v-borda);
+	box-shadow: none;
+}
+body.t20v-ativo .journal-sheet .journal-sidebar :is(search, .action-buttons) button:hover { color: var(--t20v-vermelho); border-color: var(--t20v-vermelho); }
+body.t20v-ativo .journal-sheet .journal-sidebar search button.inline-control { border: none; background: none; }
+
+/* Título do diário e páginas */
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-header input.title {
+	font-family: var(--t20v-titulo);
+	color: var(--t20v-vermelho);
+	border-bottom: 2px solid var(--t20v-vermelho);
+	background: transparent;
+}
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) :is(.journal-entry-content, .journal-header, .journal-entry-pages) { background: var(--t20v-papel); }
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page {
+	color: var(--t20v-tinta);
+	font-family: var(--t20v-texto);
+	background: transparent;
+	padding: 0 12px;
+}
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page :is(h1, h2, h3, h4) {
+	font-family: var(--t20v-titulo);
+	color: var(--t20v-vermelho);
+	text-shadow: none;
+}
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page .journal-page-header h1 {
+	border-bottom: 2px solid var(--t20v-vermelho);
+}
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page :is(h2, h3) { border-bottom: 1px solid var(--t20v-borda); }
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page :is(blockquote, .secret) {
+	background: var(--t20v-papel-2);
+	border-left: 3px solid var(--t20v-vermelho);
+	color: var(--t20v-tinta);
+	font-family: var(--t20v-texto);
+}
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page table { border-color: var(--t20v-borda); background: transparent; }
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page table :is(th, thead td) {
+	background: var(--t20v-vermelho);
+	color: var(--t20v-sobre-vermelho);
+	font-family: var(--t20v-titulo);
+}
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page table tbody :is(tr, td) { background: transparent; color: var(--t20v-tinta); }
+body.t20v-ativo .journal-sheet:not(.lv-livro-ficha) .journal-entry-page table tbody tr:nth-child(even) { background: var(--t20v-papel-2); }
+
+/* Editor de página */
+body.t20v-ativo .application.journal-entry-page .editor-content,
+body.t20v-ativo .application.journal-entry-page prose-mirror {
+	background: var(--t20v-papel);
+	color: var(--t20v-tinta);
+	font-family: var(--t20v-texto);
+}

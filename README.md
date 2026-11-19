@@ -34,6 +34,7 @@ Em *Configurações → Configurar Módulos → Tormenta20 — Visual*:
 - **Ficha do personagem:** cabeçalho em vermelho, nome em destaque, atributos, PV, PM e Defesa grandes, barras de PV e PM (com os temporários), condições ativas logo abaixo do cabeçalho, perícias treinadas em destaque e as não treinadas esmaecidas, listas sem as listras cinzas.
 - **NPC:** a aba de estatísticas do sistema no formato do livro (nome e ND em vermelho, rótulos em negrito).
 - **Chat:** cartões em pergaminho, título em vermelho, total de ataque e de dano grandes, faixa de acertou ou errou.
+- **Diários:** moldura vermelha, índice e páginas em pergaminho (ou escuro), títulos com a fonte do tema, tabelas com cabeçalho vermelho e linhas alternadas, citações destacadas. Diários de módulos com estilo próprio (como os da Libertação de Valkaria) mantêm o texto das páginas como o módulo fez.
 - **Fontes:** Eczar (títulos e números) e Gelasio (texto), de licença aberta (veja `fonts/LEIA-ME.txt`).
 
 ## Imagens
