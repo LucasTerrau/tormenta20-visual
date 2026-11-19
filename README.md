@@ -24,7 +24,7 @@ Em *Configurações → Configurar Módulos → Tormenta20 — Visual*:
 | Mostrar acertou ou errou no cartão de ataque | mestre | Guarda os alvos marcados na hora do ataque e mostra "Acertou/Errou/Crítico" contra a Defesa de cada um (20 natural sempre acerta, 1 natural sempre erra; crítico pela margem da arma). Só em ataques (teste de perícia não conta); o número da Defesa só o mestre vê. |
 | Botões das janelas num menu | cada jogador | Nas fichas ficam à vista fechar, configurar a ficha do T20 e Fabricar; os outros botões vão para o menu ⋮ (quando sobram dois ou mais). |
 | Esconder dos jogadores as ferramentas de cena do mestre | mestre | Desenhos, notas, tiles, sons, luzes, paredes e regiões somem para os jogadores. |
-| Abas escondidas da barra lateral | mestre | Escolhe as abas que os jogadores não veem. Padrão: objetos da cena, tokens, tiles, desenhos, paredes, luzes, sons, regiões, notas, cartas e playlists. |
+| Abas escondidas da barra lateral | mestre | Escolhe as abas que os jogadores não veem. Padrão: objetos da cena, tokens, tiles, desenhos, paredes, luzes, sons, regiões, notas e cartas. A de Playlists fica à vista porque é nela que cada jogador ajusta o volume. |
 | Esconder as abas também para o mestre | mestre (para si) | Aplica a mesma lista ao mestre. |
 | Recolher a barra de macros e a lista de jogadores | cada jogador | As duas ficam apagadas e aparecem ao passar o mouse. |
 | Ícones do sistema nos compêndios | mestre | Troca os ícones genéricos do Foundry (e as entradas sem imagem) pelos ícones do sistema. Imagens escolhidas à mão ficam. |

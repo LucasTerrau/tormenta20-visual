@@ -22,7 +22,7 @@ const ABAS = {
 	tables: "Tabelas",
 	cards: "Cartas",
 	macros: "Macros",
-	playlists: "Playlists",
+	playlists: "Playlists (volume de cada jogador)",
 	compendium: "Compêndios",
 	settings: "Configurações",
 	tokens: "Tokens",
@@ -34,7 +34,8 @@ const ABAS = {
 	regions: "Regiões",
 	notes: "Notas"
 };
-const ABAS_PADRAO = ["placeables", "tokens", "tiles", "drawings", "walls", "lighting", "sounds", "regions", "notes", "cards", "playlists"];
+const ABAS_PADRAO = ["placeables", "tokens", "tiles", "drawings", "walls", "lighting", "sounds", "regions", "notes", "cards"];
+// Playlists fica de fora do padrão: é nessa aba que cada jogador ajusta o volume da música, do ambiente e da interface.
 // Grupos de ferramentas de cena que o jogador nunca usa (o Foundry já tranca a maioria por permissão).
 const FERRAMENTAS_DO_MESTRE = ["drawings", "notes", "tiles", "sounds", "lighting", "walls", "regions"];
 
@@ -143,7 +144,7 @@ function registrarOpcoes() {
 	game.settings.registerMenu(ID, "abasMenu", {
 		name: "Abas escondidas da barra lateral",
 		label: "Escolher abas",
-		hint: "Abas que a mesa não usa (cartas, playlists, objetos da cena…) somem para os jogadores.",
+		hint: "Abas que a mesa não usa (cartas, objetos da cena…) somem para os jogadores. A de Playlists tem o volume de cada jogador: escondida, ninguém ajusta o som.",
 		icon: "fa-solid fa-eye-slash",
 		type: AbasMenu,
 		restricted: true
