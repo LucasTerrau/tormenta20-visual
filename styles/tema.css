@@ -6,7 +6,9 @@
 @font-face { font-family: "T20V Gelasio"; font-weight: 400; font-style: italic; src: url("../fonts/gelasio-v9-latin-ext_latin-italic.woff2") format("woff2"); }
 @font-face { font-family: "T20V Gelasio"; font-weight: 600; src: url("../fonts/gelasio-v9-latin-ext_latin-600.woff2") format("woff2"); }
 
-body.t20v-tema-pergaminho {
+/* A ficha do módulo Bases — Tormenta 20 (classe t20bas) só tem visual claro: fica em pergaminho também no tema escuro. */
+body.t20v-tema-pergaminho,
+body.t20v-tema-escuro .t20bas {
 	--t20v-papel: #f4ecd8;
 	--t20v-papel-2: #ebe0c6;
 	--t20v-papel-3: #ddcca8;
